@@ -1,6 +1,8 @@
 # Typescript + Babel + Webpack / Boilerplate
 
-Ready-to-use boilerplate project of Typescript + Babel + Webpack
+Ready-to-use boilerplate project of Typescript + Babel + Webpack.
+
+Include ESLint, eslint-config-airbnb, dotenv, css prefixer, css minifier, etc.
 
 
 # Requirements
