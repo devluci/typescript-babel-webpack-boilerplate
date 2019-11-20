@@ -1,0 +1,53 @@
+{
+  "name": "typescript-babel-webpack-boilerplate",
+  "version": "0.1.0",
+  "description": "Typescript + Babel + Webpack",
+  "author": "Lucid (@devluci)",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/devluci/typescript-babel-webpack-boilerplate.git"
+  },
+  "scripts": {
+    "watch": "webpack --watch",
+    "start": "webpack-dev-server",
+    "build": "node prebuild.js && webpack --mode=production && node postbuild.js"
+  },
+  "engines": {
+    "node": ">=12.13.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.7.0",
+    "@babel/core": "^7.7.2",
+    "@babel/plugin-proposal-class-properties": "^7.7.0",
+    "@babel/plugin-proposal-numeric-separator": "^7.2.0",
+    "@babel/plugin-proposal-object-rest-spread": "^7.6.2",
+    "@babel/preset-env": "^7.7.1",
+    "@babel/preset-typescript": "^7.7.2",
+    "@sentry/browser": "^5.9.0",
+    "@sentry/webpack-plugin": "^1.9.3",
+    "@typescript-eslint/eslint-plugin": "^2.8.0",
+    "@typescript-eslint/parser": "^2.8.0",
+    "autoprefixer": "^9.7.2",
+    "awesome-typescript-loader": "^5.2.1",
+    "copy-webpack-plugin": "^5.0.5",
+    "css-loader": "^3.2.0",
+    "cssnano": "^4.1.10",
+    "dotenv": "^8.2.0",
+    "dotenv-webpack": "^1.7.0",
+    "eslint": "^6.1.0",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-loader": "^3.0.2",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.14.3",
+    "eslint-plugin-react-hooks": "^1.7.0",
+    "html-webpack-plugin": "^3.2.0",
+    "postcss-loader": "^3.0.0",
+    "style-loader": "^1.0.0",
+    "typescript": "^3.7.2",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.9.0"
+  }
+}
