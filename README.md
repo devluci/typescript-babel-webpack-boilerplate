@@ -17,7 +17,7 @@ Include ESLint, eslint-config-airbnb, dotenv, css prefixer, css minifier, etc.
 ```shell script
 git clone https://github.com/devluci/typescript-babel-webpack-boilerplate.git
 cd typescript-babel-webpack-boilerplate
-npm build
+npm install
 npm run start
 ```
 
