@@ -2,25 +2,30 @@
   "parser": "@typescript-eslint/parser",
   "plugins": ["@typescript-eslint"],
   "extends": [
-    "airbnb"
+    "eslint:recommended",
+    "google",
+    "plugin:import/typescript"
   ],
   "env": {
     "browser": true,
+    "es6": true,
     "node": true
   },
-  "parserOptions": {
-    "project": "./tsconfig.json",
-    "ecmaFeatures": { "jsx": true },
-    "useJSXTextNode": true
+  "globals": {
+    "Phaser": true,
+    "__webpack_hash__": true
   },
   "rules": {
-    "import/no-extraneous-dependencies": "off",
-    "sort-imports": ["error", {
-      "ignoreCase": false,
-      "ignoreDeclarationSort": false,
-      "ignoreMemberSort": false,
-      "memberSyntaxSortOrder": ["none", "all", "multiple", "single"]
-    }]
+    "max-len": ["error", {
+      "code": 120,
+      "tabWidth": 2,
+      "ignoreUrls": true
+    }],
+    "require-jsdoc": "off",
+    "operator-linebreak": ["error", "before"],
+    "new-cap": ["error", { "capIsNew":  false }],
+    "one-var": "off",
+    "guard-for-in": "off"
   },
   "overrides": [
     {
@@ -28,8 +33,23 @@
       "extends": [
         "plugin:@typescript-eslint/recommended"
       ],
+      "parserOptions": {
+        "project": "./tsconfig.json",
+        "ecmaFeatures": { "jsx": true },
+        "useJSXTextNode": true
+      },
+      "settings": {
+        "import/parsers": {
+          "@typescript-eslint/parser": [".ts", ".tsx"]
+        }
+      },
       "rules": {
-        "import/no-unresolved": "off"
+        "no-inner-declarations": "off",
+        "semi": "off",
+        "@typescript-eslint/semi": ["error"],
+        "@typescript-eslint/no-namespace": "off",
+        "@typescript-eslint/no-use-before-define": "off",
+        "@typescript-eslint/no-non-null-assertion": "off"
       }
     }
   ]

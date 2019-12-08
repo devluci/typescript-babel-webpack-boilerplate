@@ -1,12 +1,12 @@
-import '../css/normalize.css';
-import '../css/main.css';
+import * as sentry from '@sentry/browser';
 
 import * as report from 'utils/report';
-import * as sentry from '@sentry/browser';
+import '../css/main.css';
+import '../css/normalize.css';
 
 
 if (process.env.SENTRY_HOST) {
-  sentry.init({ dsn: process.env.SENTRY_HOST });
+  sentry.init({dsn: process.env.SENTRY_HOST});
   report.enable();
 }
 

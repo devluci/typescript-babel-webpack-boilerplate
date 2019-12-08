@@ -13,14 +13,14 @@ export function disable(): void {
 }
 
 
-export function report(error: string | Error): void {
-  // eslint-disable-next-line no-console
+export function report(error: string | Error, throwError = false): void {
   console.error(error);
   if (enabled) {
-    if (report instanceof Error) {
+    if (error instanceof Error) {
       sentry.captureException(error);
     } else {
       sentry.captureMessage(error as string);
     }
   }
+  if (throwError && error instanceof Error) throw error;
 }

@@ -4,14 +4,14 @@ const path = require('path');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
-const { TsConfigPathsPlugin } = require('awesome-typescript-loader');
+const {TsConfigPathsPlugin} = require('awesome-typescript-loader');
 
 const dotenv = require('dotenv');
 const DotenvPlugin = require('dotenv-webpack');
 const SentryCliPlugin = require('@sentry/webpack-plugin');
 
 const envPath = path.resolve(__dirname, '.env');
-dotenv.config({ path: envPath });
+dotenv.config({path: envPath});
 
 module.exports = (env, argv) => {
   const production = argv.mode === 'production';
@@ -61,6 +61,7 @@ module.exports = (env, argv) => {
             loader: 'awesome-typescript-loader',
             options: {
               useCache: true,
+              cacheDirectory: path.resolve(__dirname, 'node_modules/.cache/awesome-typescript-loader'),
               useBabel: true,
               babelCore: '@babel/core',
             },
